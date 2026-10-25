@@ -1,0 +1,153 @@
+
+/* 1. Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+/* 2. Tela principal */
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    gap: 20px;
+
+    background-image: url(imagens/fundo.png);
+}
+
+/* 3. Conteúdo central */
+.tela-inicio {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    z-index: 1;
+}
+
+/* 4. Logo */
+.tela-inicio img {
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+}
+
+/* 5. Nome EcoWatt */
+.tela-inicio h2 {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-top: -10px;
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 800;
+
+}
+
+.tela-inicio h2 .destaque{
+     color: #8ee323;
+}
+
+/* Destaque verde no nome */
+.tela-inicio h2 {
+    color: #ffffff;
+}
+
+/* 6. Título principal */
+.tela-inicio h3 {
+    max-width: 330px;
+    margin-top: 24px;
+    font-size: 21px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+/* 7. Descrição */
+.tela-inicio p {
+    max-width: 330px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #d5e7dc;
+}
+
+/* 8. Botões */
+main > a {
+    width: 100%;
+    max-width: 360px;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+
+    z-index: 1;
+}
+
+/* Botão Entrar */
+main > a:first-of-type {
+    background: linear-gradient(135deg, #8ee323, #65c91b);
+    color: #ffffff;
+    box-shadow: 0 5px 18px rgba(101, 201, 27, 0.2);
+}
+
+/* Botão Registrar */
+main > a:last-of-type {
+    border: 1.5px solid #83d82c;
+    color: #b5f477;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* Efeito ao passar o mouse */
+main > a:hover {
+    transform: translateY(-2px);
+}
+
+/* 9. Ajustes para celulares */
+@media (max-width: 480px) {
+    main {
+        padding: 32px 24px;
+        gap: 16px;
+    }
+
+    .tela-inicio img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .tela-inicio h2 {
+        font-size: 36px;
+    }
+
+    .tela-inicio h3 {
+        font-size: 19px;
+        margin-top: 16px;
+    }
+
+    .tela-inicio p {
+        font-size: 14px;
+    }
+
+    main > a {
+        max-width: 100%;
+    }
+}
