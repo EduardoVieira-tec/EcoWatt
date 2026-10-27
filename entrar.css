@@ -20,7 +20,9 @@ body {
 /* ========================================
    ESTRUTURA PRINCIPAL
 ======================================== */
-
+.bnt-voltar:hover {
+  background: rgba(142, 227, 35, 0.15);
+}
 main {
     min-height: 100vh;
     width: 100%;
@@ -312,7 +314,10 @@ main > a:nth-of-type(3):hover {
 /* ========================================
    TERMOS E PRIVACIDADE
 ======================================== */
-
+.bnt-voltar{
+    right: 330px;
+    background: ;
+}
 main > p:last-child {
     max-width: 360px;
     margin-top: 12px;
