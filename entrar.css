@@ -314,10 +314,6 @@ main > a:nth-of-type(3):hover {
 /* ========================================
    TERMOS E PRIVACIDADE
 ======================================== */
-.bnt-voltar{
-    right: 330px;
-    background: ;
-}
 main > p:last-child {
     max-width: 360px;
     margin-top: 12px;
