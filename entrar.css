@@ -1,5 +1,7 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
 
-/* Configurações gerais */
 * {
     margin: 0;
     padding: 0;
@@ -20,9 +22,7 @@ body {
 /* ========================================
    ESTRUTURA PRINCIPAL
 ======================================== */
-.bnt-voltar:hover {
-  background: rgba(142, 227, 35, 0.15);
-}
+
 main {
     min-height: 100vh;
     width: 100%;
@@ -73,6 +73,47 @@ main > * {
 }
 
 /* ========================================
+   BOTÃO VOLTAR (canto superior esquerdo)
+======================================== */
+
+.bnt-voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #b5f477;
+    font-size: 18px;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.bnt-voltar:hover {
+    background: rgba(142, 227, 35, 0.15);
+    border-color: #8ee323;
+    color: #8ee323;
+}
+
+.bnt-voltar:focus-visible {
+    outline: 2px solid #8ee323;
+    outline-offset: 2px;
+}
+
+/* ========================================
    LOGO E NOME
 ======================================== */
 
@@ -82,9 +123,7 @@ main > img {
     object-fit: contain;
     margin-bottom: -8px;
 
-    filter: drop-shadow(
-        0 8px 20px rgba(0, 0, 0, 0.15)
-    );
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
 }
 
 main > h2 {
@@ -168,9 +207,7 @@ main > p:first-of-type {
 .grupo-input:focus-within {
     border-color: #8ee323;
     background: rgba(255, 255, 255, 0.10);
-
-    box-shadow:
-        0 0 0 3px rgba(142, 227, 35, 0.12);
+    box-shadow: 0 0 0 3px rgba(142, 227, 35, 0.12);
 }
 
 .grupo-input:focus-within > i {
@@ -217,29 +254,29 @@ main > p:first-of-type {
    LINKS
 ======================================== */
 
-main > a {
-    text-decoration: none;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    transition:
-        transform 0.2s ease,
-        background-color 0.2s ease,
-        border-color 0.2s ease;
-}
-
-/* Esqueci minha senha */
-main > a:first-of-type {
+/* Esqueci minha senha (link simples, alinhado à direita) */
+.link-esqueci {
     width: 100%;
     max-width: 360px;
-    margin-top: -10px;
+    margin-top: -6px;
 
-    color: #b5f477;
+    color: #f2f3f0;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 12px;
     font-weight: 600;
     text-align: right;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
 }
 
-/* Entrar */
-main > a:nth-of-type(2) {
+.link-esqueci:hover {
+    color: #8ee323;
+    text-decoration: underline;
+}
+
+/* Entrar (botão principal) */
+.link-entrar {
     width: 100%;
     max-width: 360px;
     min-height: 52px;
@@ -252,68 +289,60 @@ main > a:nth-of-type(2) {
 
     border: 1px solid #8ee323;
     border-radius: 30px;
-
-    background: linear-gradient(
-        135deg,
-        #8ee323,
-        #65c91b
-    );
-
-    box-shadow:
-        0 7px 22px rgba(101, 201, 27, 0.18);
+    background: linear-gradient(135deg, #8ee323, #65c91b);
+    box-shadow: 0 7px 22px rgba(101, 201, 27, 0.18);
 
     color: #173b13;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 14px;
     font-weight: 800;
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-/* Criar conta */
-main > a:nth-of-type(3) {
-    width: 100%;
-    max-width: 360px;
-    min-height: 52px;
+.link-entrar:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #a2f044, #78d82b);
+    box-shadow: 0 10px 26px rgba(101, 201, 27, 0.25);
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1.5px solid #83d82c;
-    border-radius: 30px;
-
-    background: rgba(255, 255, 255, 0.03);
-
+/* Criar conta (link simples e centralizado) */
+.link-criar {
     color: #b5f477;
-    font-size: 14px;
-    font-weight: 700;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
 }
 
-/* Efeitos ao passar o mouse */
-main > a:first-of-type:hover {
+.link-criar:hover {
     color: #8ee323;
+    text-decoration: underline;
 }
 
-main > a:nth-of-type(2):hover {
-    transform: translateY(-2px);
-
-    background: linear-gradient(
-        135deg,
-        #a2f044,
-        #78d82b
-    );
-
-    box-shadow:
-        0 10px 26px rgba(101, 201, 27, 0.25);
+/* Foco visível por teclado em todos os links */
+.link-esqueci:focus-visible,
+.link-entrar:focus-visible,
+.link-criar:focus-visible {
+    outline: 2px solid #8ee323;
+    outline-offset: 3px;
+    border-radius: 6px;
 }
 
-main > a:nth-of-type(3):hover {
-    transform: translateY(-2px);
-    background: rgba(142, 227, 35, 0.09);
-    border-color: #a2f044;
+.link-criar{
+    margin-top: 30px;
 }
-
 /* ========================================
    TERMOS E PRIVACIDADE
 ======================================== */
+
 main > p:last-child {
     max-width: 360px;
     margin-top: 12px;
@@ -364,9 +393,8 @@ main > p:last-child a:hover {
         border-radius: 12px;
     }
 
-    main > a:first-of-type,
-    main > a:nth-of-type(2),
-    main > a:nth-of-type(3) {
+    .link-esqueci,
+    .link-entrar {
         max-width: 100%;
     }
 
