@@ -1,0 +1,99 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background: #003b25;
+    color: #ffffff;
+}
+
+/* ========================================
+   ESTRUTURA PRINCIPAL
+======================================== */
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    padding: 45px 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    background-image: url(imagens/fundo.png);
+}
+
+main::before {
+    width: 380px;
+    height: 380px;
+    top: -190px;
+    right: -150px;
+}
+
+main::after {
+    width: 300px;
+    height: 300px;
+    bottom: -170px;
+    left: -140px;
+}
+
+/* ========================================
+   LOGO E NOME
+======================================== */
+
+main > img {
+    width: 112px;
+    height: 112px;
+    object-fit: contain;
+    margin-bottom: -8px;
+
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+}
+
+main > h2 {
+    font-size: 39px;
+    font-weight: 800;
+    letter-spacing: -1.8px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.destaque {
+    color: #8ee323;
+}
+
+.bi-check-circle-fill{
+    font-size: 60px;
+    color: rgb(51, 230, 51);
+}
+
+main > p{
+    text-align: center;
+}
+
+.voltar{
+    text-decoration: none;
+    color: greenyellow;
+}
+
+.voltar:hover{
+    color: #37c44e;
+}

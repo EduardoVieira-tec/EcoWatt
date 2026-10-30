@@ -41,17 +41,6 @@ main {
     background-image: url(imagens/fundo.png);
 }
 
-/* Círculos decorativos no fundo */
-main::before,
-main::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid rgba(142, 227, 35, 0.10);
-    pointer-events: none;
-    z-index: -1;
-}
-
 main::before {
     width: 380px;
     height: 380px;
